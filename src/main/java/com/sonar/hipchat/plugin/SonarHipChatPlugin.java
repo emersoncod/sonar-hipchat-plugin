@@ -12,7 +12,7 @@ import org.sonar.api.SonarPlugin;
 @Properties({ 
 	@Property(key = SonarHipChatProperties.DISABLED, 
               name = "Disable hipchat notification",
-              defaultValue = "false",
+              defaultValue = "true",
               description = "If set to true no notification is sent to HipChat",
               global = true,
               project = true,
@@ -30,7 +30,14 @@ import org.sonar.api.SonarPlugin;
 	          description = "The authentication token for sending notifications to a HipChat room",
 	          global = true,
 	          project = true,
-	          type = PropertyType.STRING)
+	          type = PropertyType.STRING),
+	@Property(key = SonarHipChatProperties.MESSAGE,
+			  name = "Notification intro message",
+			  description = "Adds a message before the notification. {project} is replaced by project name, {date} by the analysis date",
+			  defaultValue = "",
+			  global = true,
+			  project = true,
+			  type = PropertyType.STRING)
 	})
 // @formatter:on
 public class SonarHipChatPlugin extends SonarPlugin {

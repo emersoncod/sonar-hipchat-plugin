@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.cetrea</groupId>
+	<groupId>com.sonar</groupId>
 	<artifactId>sonar-hipchat-plugin</artifactId>
 	<packaging>sonar-plugin</packaging>
 	<version>0.1-SNAPSHOT</version>
@@ -42,7 +42,7 @@
 				<version>1.13</version>
 				<extensions>true</extensions>
 				<configuration>
-					<pluginClass>com.cetrea.sonar.HipChatNotifierPlugin</pluginClass>
+					<pluginClass>com.sonar.hipchat.plugin.SonarHipChatPlugin</pluginClass>
 				</configuration>
 			</plugin>
 			<plugin>
