@@ -31,7 +31,7 @@ import org.sonar.api.SonarPlugin;
 	          global = true,
 	          project = true,
 	          type = PropertyType.STRING),
-	@Property(key = SonarHipChatProperties.MESSAGE,
+	@Property(key = SonarHipChatProperties.PRE_MESSAGE,
 			  name = "Notification intro message",
 			  description = "Adds a message before the notification. {project} is replaced by project name, {date} by the analysis date",
 			  defaultValue = "",
